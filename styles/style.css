@@ -1,0 +1,337 @@
+:root {
+  /* Basic Colours */
+  --black: #000;
+  --white: #fff;
+  /* Accent Colours */
+  --wheat: #E8D2AE;
+  --tumbleweed: #D7B29D;
+  --dust: #FFEBCD;
+  --lavender: #EEE5E9;
+  --champagne: #E9D8A6;
+  --gold: #DDDF00;
+  --pink: #FFAFCC;
+  /* Lightmode Palate */
+  --yellow: rgb(255, 205, 55);
+  --altyellow: rgb(235, 194, 84);
+  --red: rgb(249, 19, 22);
+  /* Darkmode Palate */
+  --dusk: #44355b;
+  --salmon: #F28482;
+  /* Spring Palate */
+  --peach: #F5CAC3;
+  --pine: #007F5F;
+}
+
+::selection {
+  background: var(--dusk);
+  color: var(--salmon);
+}
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  color: var(--red);
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  min-height: 100%;
+  line-height: 1;
+  font-family: 'Fraunces', serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: 100%;
+  font-weight: 200;
+}
+
+input, select, option, optgroup, textarea, button,
+pre, code {
+  font-size: 100%;
+  font-family: inherit;
+}
+
+ol, ul {
+  list-style: none;
+}
+/* Reset End */
+
+/* Universal */
+* {
+  box-sizing: border-box;
+}
+
+main {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+/* Universal End */
+
+/* General Styles */
+body {
+  background-color: var(--altyellow); /* or var(--dust);*/
+  font-family:  'Fraunces', serif;
+}
+
+h2,
+h3 {
+  font-size: 2.5em;
+}
+
+p {
+  /* font-size: 1.75em; */
+  line-height: 120%;
+}
+
+.title {
+  font-size: 3em;
+}
+
+header {
+  align-items: center;
+  padding: 1%, 0%, 1% ,1%;
+  font-size: 3em;
+}
+
+.footer {
+  justify-content: center;
+  text-align: center;
+  font-size: 1em;
+  font-weight: 200;
+}
+
+.footer li { 
+  margin: 0 0 0 0;
+}
+
+.backbutton {
+  position: relative;
+  padding: 15px;
+}
+
+/* General Styles End */
+
+/* About */
+
+.title {
+  font-size: 5em;
+}
+
+.paragraph {
+  font-size: 1.75em;
+}
+
+#about-me {
+  font-weight: 300;
+  /* justify-content: center; */
+  text-align: justify;
+  /* /* margin-top: 50px; 80px */
+  justify-content: space-evenly;
+}
+
+.about-me-content {
+  width: 75%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#contact {
+  justify-content: center;
+  text-align: center;
+  line-height: 30px;
+  margin-top: 80px;
+  margin-bottom: 30px;
+}
+
+.link {
+  border-bottom: 1.8px solid var(--black);
+}
+/* About End */
+
+/* Career */
+#career {
+  font-weight: 300;
+  text-align: left;
+}
+
+.career-content {
+  width: 75%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+li {
+  padding-left: 1em;
+  padding-right: 1em;
+  /* font-size: 1.75em; */
+}
+
+table {
+  padding-left: 1em;
+  border-collapse: collapse;
+}
+
+.competencies {
+  margin-top: .75em;
+}
+
+.competencies-header {
+  font-size: 3em;
+  padding-bottom: .5em;
+}
+
+.developing-header {
+  font-size: 3em;
+  padding-bottom: .5em;
+  text-align: right;
+}
+
+.developing-list {
+  text-align: right;
+}
+
+.career-list {
+  padding-bottom: .75em;
+}
+
+.employment-header {
+  font-size: 3em;
+}
+
+th {
+  font-weight: 200;
+}
+
+td {
+  padding: .75em;
+}
+
+thead {
+  align-items: right;
+}
+
+.table-header {
+  padding-bottom: 1em;
+}
+/* Career End */
+
+/* Homepage */
+.big-ol-container {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+}
+
+.homepage {
+  font-size: 3em;
+  /* width: 968.17px; */
+  width: 1000px;
+  line-height: 90%;
+  text-align: right;
+  margin: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#name {
+  font-size: 4em;
+  text-align: center;
+  font-weight: 200;
+}
+
+#profession {
+  font-weight: 200;
+  font-style: italic;
+  border-bottom: 1.5px solid var(--black);
+}
+/* Homepage End */
+
+/* Media */
+@media screen and (min-width: 1281px) {
+  .career-content {
+    max-width: 35%;
+  }
+}
+
+@media screen and (min-width: 1050px) {
+  .career-content {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 655px) {
+  .about-me-content {
+    position: sticky;
+    width: 100%;
+    top: 0%;
+    left: 25%;
+    transform: translate(0%, 0%);
+  }
+  .career-container {
+    width: 100%;
+    margin-top: 5%;
+  }
+  p,li,td,th,thead,tbody {
+    font-size: 15px;
+  }
+  .competencies-header,.developing-header,.employment-header {
+    text-align: left;
+    font-size: 1.5em;
+    padding-top: 1em;
+    top: 0%;
+  }
+  .developing-list {
+    text-align: left;
+    font-size: 1.25em;
+  }
+  td {
+    padding: .25em;
+  }
+}
+
+@media screen and (max-width: 975px) {
+  .homepage {
+    width: 100vw;
+    text-align: center;
+    line-height: 110%;
+    }
+  #name {
+    font-size: 2em;
+  }
+  #profession {
+    text-align: right;
+  }
+}
+
+@media screen and (min-width: 1665px) {
+  .about-me-content {
+    max-width: 33%;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: var(--dusk);
+  }
+  * {
+    color: var(--salmon);
+  }
+  ::selection {
+    background: var(--altyellow);
+    color: var(--red);
+  }
+}
+/* Media End */
